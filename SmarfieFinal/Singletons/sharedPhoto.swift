@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 //import CoreData
 
+// MARK: TRASH
+
 class PhotoScore:Hashable{
     var hashValue: Int = 0
     var image: UIImage
@@ -28,21 +30,14 @@ class PhotoScore:Hashable{
 
     }
 
-    
- 
 }
-
-
 
 class PhotoShared{
 
-    
     static let shared = PhotoShared()
 //    let fetchRequest: NSFetchRequest<BestPhotos> = BestPhotos.fetchRequest()
 //    var best = [BestPhotos]()
-    
-    
-    
+
     var myPhotoSession: [PhotoScore]?
     
     
@@ -75,7 +70,7 @@ class PhotoShared{
     
     
     
-    var favourites:[UIImage]{
+    var favourites: [UIImage]{
         get{
             var images:[UIImage] = []
             if let _ = setOfFavourites{
@@ -107,9 +102,3 @@ class PhotoShared{
 
     var setOfFavourites:Set<UIImage>?
 }
-
-
-
-
-
-

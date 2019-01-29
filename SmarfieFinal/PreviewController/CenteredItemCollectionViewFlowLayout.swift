@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: TRASH
+
 class CenteredItemCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {

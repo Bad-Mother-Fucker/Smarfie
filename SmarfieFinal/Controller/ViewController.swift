@@ -9,7 +9,9 @@
 import UIKit
 import AVFoundation
 import CoreMotion
+
 class ViewController: UIViewController {
+
     static var sessionState:SessionState = .active
     var currentCameraPosition: CameraPosition?
     var frontCameraInput:AVCaptureInput?

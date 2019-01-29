@@ -8,14 +8,20 @@
 
 import UIKit
 
+// MARK: TRASH
+
 class onBoardingViewController: UIPageViewController, UIPageViewControllerDataSource,UIPageViewControllerDelegate {
-   override private (set) lazy var viewControllers:[UIViewController] = { return [newViewController(0),newViewController(1),newViewController(2),newViewController(3),newViewController(4)]}()
+
+   override private (set) lazy var viewControllers: [UIViewController] = { return [newViewController(0), newViewController(1), newViewController(2), newViewController(3), newViewController(4)] }()
     
     @IBOutlet weak var cameraButton: UIButton!
-    var pageControl = UIPageControl(frame:CGRect(x:0,y:UIScreen.main.bounds.maxY - 50,width:UIScreen.main.bounds.width,height:50))
+
+    var pageControl = UIPageControl(frame: CGRect(x:0,y:UIScreen.main.bounds.maxY - 50,width:UIScreen.main.bounds.width,height:50))
+
     func configurePageControl(){
             pageControl.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
@@ -53,7 +59,7 @@ class onBoardingViewController: UIPageViewController, UIPageViewControllerDataSo
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
     
         guard let index = viewControllers.index(of: viewController)else {return nil}
-        guard index + 1 < 5 else{return nil}
+        guard index + 1 < 5 else{ return nil }
         
         
         return viewControllers[index + 1]

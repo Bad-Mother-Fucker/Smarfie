@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: TRASH
+
 class SettingsViewController: UITableViewController,UIGestureRecognizerDelegate{
     let newBestSideController = BestSideViewController()
     let tapRec = UITapGestureRecognizer(target: self, action: #selector (tapHandler(_:)))

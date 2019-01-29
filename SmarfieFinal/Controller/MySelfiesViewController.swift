@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CoreMotion
+
 class MySelfiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
@@ -28,7 +29,7 @@ class MySelfiesViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         // MARK:- CUSTOM NAVIGATION
-    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red:0.17, green:0.67, blue:0.71, alpha:1.0)]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 0.17, green: 0.67, blue: 0.71, alpha: 1.0)]
     UINavigationBar.appearance().tintColor = UIColor(red:0.17, green:0.67, blue:0.71, alpha:1.0)
         
         NotificationCenter.default.addObserver(self, selector: #selector (reloadData(_:)), name: NSNotification.Name("ReloadCollectionViews"), object: nil)
@@ -83,15 +84,16 @@ class MySelfiesViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "myRow") as! FirstTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "myRow") as? FirstTableViewCell{
                 cell.sourceController = self
                 return cell
+            } else { return UITableViewCell() }
         } else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "myRow2") as! TableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "myRow2") as? TableViewCell {
                 cell.sourceController = self
                 return cell
-            
-            }
+            } else { return UITableViewCell() }
+        }
         
     }
     
@@ -160,6 +162,3 @@ extension MySelfiesViewController: UINavigationControllerDelegate {
         }
     }
 }
-
-
-

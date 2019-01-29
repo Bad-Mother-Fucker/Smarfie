@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+ù
+        // MARK: TRASH
 
         DispatchQueue.main.async {
             BestSelfie.shared.retrieveBest()
@@ -64,6 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+// MARK: TRASH
 
 extension UserDefaults{
     var isFirstLaunch:Bool{

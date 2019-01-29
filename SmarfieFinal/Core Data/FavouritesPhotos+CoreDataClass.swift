@@ -10,6 +10,8 @@
 import Foundation
 import CoreData
 
+// MARK: TRASH
+
 @objc(FavouritesPhotos)
 public class FavouritesPhotos: NSManagedObject {
 

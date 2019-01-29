@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 
+// MARK: TRASH
+
 class PersistenceService {
     
     // MARK: - Core Data stack

@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: TRASH
+
 class User {
     static let shared = User()
     var bestSide:FaceSide = .right

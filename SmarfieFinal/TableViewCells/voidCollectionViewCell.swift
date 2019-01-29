@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: TRASH
+
 class voidCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var photo: UIImageView!

@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+// MARK: TRASH
+
 class PreviewViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   //  let dataPersistanceManager = DataPersistanceManager.shared
     
@@ -37,9 +39,12 @@ class PreviewViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         var insets = self.myPhotoCollectionView.contentInset
-        let value = (self.view.frame.size.width - (self.myPhotoCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+        if let collectionLayout = self.myPhotoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout{
+            let value = (self.view.frame.size.width - collectionLayout.itemSize.width) * 0.5
+            
             insets.left = value
             insets.right = value
+        }
         self.myPhotoCollectionView.contentInset = insets
         self.myPhotoCollectionView.decelerationRate = UIScrollViewDecelerationRateNormal
         myPhotoCollectionView.backgroundColor = UIColor.white
@@ -189,8 +194,9 @@ class PreviewViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath)
-        let photoCell = cell.viewWithTag(1) as! UIImageView
-        photoCell.image = PhotoShared.shared.myPhotoSession![indexPath.row].image
+        if let photoCell = cell.viewWithTag(1) as? UIImageView {
+            photoCell.image = PhotoShared.shared.myPhotoSession![indexPath.row].image
+        }
         cell.backgroundColor = .white
         
         return cell

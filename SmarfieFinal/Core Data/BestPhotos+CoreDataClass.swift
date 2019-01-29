@@ -10,6 +10,8 @@
 import Foundation
 import CoreData
 
+// MARK: TRASH
+
 @objc(BestPhotos)
 public class BestPhotos: NSManagedObject {
 

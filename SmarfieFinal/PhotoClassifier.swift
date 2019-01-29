@@ -53,14 +53,14 @@ class PhotoClassifier{
         return newImage!
     }
     
-    func detectFaces(image:UIImage)->[CIFaceFeature]{
+    func detectFaces(image: UIImage) -> [CIFaceFeature]? {
         let myImage = self.resizeImage(image: image, newWidth: 1000)
         let newImage = CIImage(image:myImage)!
         
         let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
         let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
         let faces = faceDetector?.features(in:newImage, options: [CIDetectorSmile:true])
-        return faces as! [CIFaceFeature]
+        return faces as? [CIFaceFeature]
     }
     
     
@@ -120,9 +120,9 @@ class PhotoClassifier{
         var totalScore = score + bscore + faceAngleScore
         
         if faces.count == 1 {
-            totalScore = totalScore/6
+            totalScore /= 6
         }else{
-            totalScore = totalScore/5
+            totalScore /= 5
         }
         
         return totalScore

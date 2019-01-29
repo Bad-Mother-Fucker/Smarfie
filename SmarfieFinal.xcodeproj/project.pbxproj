@@ -27,6 +27,7 @@
 		8348C3C5203DBD7C0009FD5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C3C4203DBD7C0009FD5B /* User.swift */; };
 		8348C3C7203DBD990009FD5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C3C6203DBD980009FD5B /* ViewController.swift */; };
 		8348C3C9203DBDA50009FD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8348C3C8203DBDA50009FD5B /* Main.storyboard */; };
+		99B4232F2200F2DE0074FB0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 99B4232E2200F2DE0074FB0A /* README.md */; };
 		B926195420446257001DCB90 /* BestSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926195020446257001DCB90 /* BestSideViewController.swift */; };
 		B926195520446257001DCB90 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926195120446257001DCB90 /* OnBoardingViewController.swift */; };
 		B926195620446257001DCB90 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B926195220446257001DCB90 /* PageViewController.swift */; };
@@ -63,6 +64,7 @@
 		8348C3C4203DBD7C0009FD5B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8348C3C6203DBD980009FD5B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8348C3C8203DBDA50009FD5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		99B4232E2200F2DE0074FB0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B926195020446257001DCB90 /* BestSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestSideViewController.swift; sourceTree = "<group>"; };
 		B926195120446257001DCB90 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		B926195220446257001DCB90 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		8348C394203DBCB70009FD5B = {
 			isa = PBXGroup;
 			children = (
+				99B4232E2200F2DE0074FB0A /* README.md */,
 				8348C39F203DBCB70009FD5B /* SmarfieFinal */,
 				8348C39E203DBCB70009FD5B /* Products */,
 				196CBB2D2040F28D00E91245 /* Recovered References */,
@@ -158,20 +161,20 @@
 		8348C39F203DBCB70009FD5B /* SmarfieFinal */ = {
 			isa = PBXGroup;
 			children = (
-				B926195020446257001DCB90 /* BestSideViewController.swift */,
-				B926195320446257001DCB90 /* OnBoarding.storyboard */,
-				B926195120446257001DCB90 /* OnBoardingViewController.swift */,
-				B926195220446257001DCB90 /* PageViewController.swift */,
-				19337FB52041DDBE0073E971 /* View */,
-				8348C3A0203DBCB70009FD5B /* AppDelegate.swift */,
-				8348C3C8203DBDA50009FD5B /* Main.storyboard */,
-				191991642048707700106977 /* SettingsViewController.swift */,
-				8348C3A9203DBCB70009FD5B /* LaunchScreen.storyboard */,
 				19337FB32041DD5E0073E971 /* Core Data */,
 				19337FB42041DD860073E971 /* Controller */,
 				8348C3B8203DBD610009FD5B /* PreviewController */,
 				19337FB22041DD3C0073E971 /* Singletons */,
 				8348C3BF203DBD720009FD5B /* TableViewCells */,
+				19337FB52041DDBE0073E971 /* View */,
+				B926195020446257001DCB90 /* BestSideViewController.swift */,
+				B926195120446257001DCB90 /* OnBoardingViewController.swift */,
+				B926195220446257001DCB90 /* PageViewController.swift */,
+				8348C3A0203DBCB70009FD5B /* AppDelegate.swift */,
+				191991642048707700106977 /* SettingsViewController.swift */,
+				8348C3A9203DBCB70009FD5B /* LaunchScreen.storyboard */,
+				B926195320446257001DCB90 /* OnBoarding.storyboard */,
+				8348C3C8203DBDA50009FD5B /* Main.storyboard */,
 				8348C3A7203DBCB70009FD5B /* Assets.xcassets */,
 				8348C3AC203DBCB70009FD5B /* Info.plist */,
 			);
@@ -208,6 +211,7 @@
 				8348C399203DBCB70009FD5B /* Sources */,
 				8348C39A203DBCB70009FD5B /* Frameworks */,
 				8348C39B203DBCB70009FD5B /* Resources */,
+				99B423302200F3040074FB0A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,6 +264,7 @@
 				196CBB312040F40E00E91245 /* voidCollectionViewCell.xib in Resources */,
 				190A2D9C20A0943D00C265A9 /* Group.png in Resources */,
 				8348C3C9203DBDA50009FD5B /* Main.storyboard in Resources */,
+				99B4232F2200F2DE0074FB0A /* README.md in Resources */,
 				8348C3AB203DBCB70009FD5B /* LaunchScreen.storyboard in Resources */,
 				8348C3A8203DBCB70009FD5B /* Assets.xcassets in Resources */,
 				B926195720446257001DCB90 /* OnBoarding.storyboard in Resources */,
@@ -267,6 +272,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		99B423302200F3040074FB0A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8348C399203DBCB70009FD5B /* Sources */ = {
@@ -431,11 +456,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D4L4S7MAUX;
+				DEVELOPMENT_TEAM = 5QJLL8HM6C;
 				INFOPLIST_FILE = SmarfieFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ecorp.smarfieFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TeamRogue.smarfieFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -447,11 +472,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D4L4S7MAUX;
+				DEVELOPMENT_TEAM = 5QJLL8HM6C;
 				INFOPLIST_FILE = SmarfieFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ecorp.smarfieFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TeamRogue.smarfieFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

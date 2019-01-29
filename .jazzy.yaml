@@ -1,0 +1,64 @@
+module: Viewer.iOS
+author: Team Rogue
+github_url: https://github.com/Bad-Mother-Fucker/AcademyTV
+
+min_acl: private
+skip_undocumented: false
+theme: apple
+clean: true
+
+custom_categories:
+- name: Special Class
+  children:
+  - AppDelegate
+
+  - name: Model
+    children:
+    - VideoManager
+    - CKController
+    - TVModel
+    - TV
+    - GlobalMessageModel
+    - GlobalMessage
+    - BooquableManager
+    - BooquableOrder
+    - VideoDownloader
+
+  - name: View
+    children:
+    - GlobalMessageView
+    - GlobalMessageTableViewCell
+    - GlassOfficeTableViewCell
+
+  - name: Controller
+    children:
+    - GlassOfficeViewController
+    - BoardViewController
+    - TVViewController
+
+  - name: Enumeration
+    children:
+    - TVGroup
+    - Quality
+    - OrderStatus
+    - ImageFileType
+    - ImageError
+    - GliphName
+    - CKQueryException
+    - MessageNotification
+    - CKNotificationName
+    - CKKeys
+    - TVLayoutType
+
+  - name: Extensions
+    children:
+    - CKAsset
+    - Data
+    - UIImage
+    - UITableViewCell
+    - UIView
+
+  - name: Protocols & Delegate
+    children:
+    - ATVViewDelegate
+    - CloudStored

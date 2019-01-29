@@ -10,6 +10,8 @@ import Foundation
 import CoreData
 import UIKit
 
+// MARK: TRASH
+
 class BestSelfie {
     static let shared = BestSelfie()
     //var savedInData = [UIImage]()
@@ -103,4 +105,3 @@ class BestSelfie {
 //
     
 }
-

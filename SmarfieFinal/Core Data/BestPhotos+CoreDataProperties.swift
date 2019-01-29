@@ -10,6 +10,7 @@
 import Foundation
 import CoreData
 
+// MARK: TRASH
 
 extension BestPhotos {
 

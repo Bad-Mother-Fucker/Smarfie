@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
+// MARK: TRASH
+
 class EmptyView:UIView{
+    
     var shouldSetUpConstraints = true
     let viewController = ViewController()
     var image:UIImageView!
@@ -18,7 +21,7 @@ class EmptyView:UIView{
         super.init(frame:frame)
         image = UIImageView()
         image.frame = CGRect(x: 0, y: 64, width: screenSize.width, height: (screenSize.height - 113))
-        image.image = #imageLiteral(resourceName: "group")
+        image.image = UIImage(named: "group")
         image.contentMode = .scaleAspectFit
         self.addSubview(image)
     }
@@ -35,10 +38,4 @@ class EmptyView:UIView{
         }
         super.updateConstraints()
     }
-    
-    
-    
-
-
-
 }

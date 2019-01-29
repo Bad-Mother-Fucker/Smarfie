@@ -9,6 +9,8 @@
 import Foundation
 import CoreMotion
 
+// MARK: TRASH
+
 class MotionManager{
     static let shared = MotionManager()
    

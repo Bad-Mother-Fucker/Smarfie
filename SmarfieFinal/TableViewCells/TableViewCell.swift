@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: TRASH
+
 class TableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var sourceController: UIViewController?
@@ -53,39 +55,33 @@ class TableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
-            cell.layer.borderWidth = 0.1
-            cell.layer.borderColor = UIColor.gray.cgColor
-            cell.layer.cornerRadius = 5
-            let cellImage = cell.viewWithTag(2) as! UIImageView
-        
-        if let _ = PhotoShared.shared.setOfFavourites{
-            cellImage.image = PhotoShared.shared.favourites[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        cell.layer.borderWidth = 0.1
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.cornerRadius = 5
+        if let cellImage = cell.viewWithTag(2) as? UIImageView {
+            
+            if let _ = PhotoShared.shared.setOfFavourites{
+                cellImage.image = PhotoShared.shared.favourites[indexPath.item]
             }
-            return cell
-         }
+        }
+        return cell
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _ = PhotoShared.shared.setOfFavourites {
-            let controller = UIStoryboard(name: "Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "MySelfiesDetailsViewController") as! MySelfiesDetailsViewController
-            controller.photo = PhotoShared.shared.favourites[indexPath.item]
-            controller.index = indexPath.item
-            controller.photoType = .favourite
-            let vc = UINavigationController(rootViewController: controller)
-            if let source = sourceController{
-                source.present(_:vc,animated:true,completion:nil)
+            if let controller = UIStoryboard(name: "Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "MySelfiesDetailsViewController") as? MySelfiesDetailsViewController {
+                controller.photo = PhotoShared.shared.favourites[indexPath.item]
+                controller.index = indexPath.item
+                controller.photoType = .favourite
+                let vc = UINavigationController(rootViewController: controller)
+                if let source = sourceController{
+                    source.present(_:vc,animated:true,completion:nil)
+                }
+            }else{
+                return
             }
-        }else{
-            return
         }
-        
     }
-
-    
 }
-
-
-
-
-

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: TRASH
+
 class PageViewController: UIViewController {
     let pages = [#imageLiteral(resourceName: "1 Prima schermata"),#imageLiteral(resourceName: "2 Seconda schermata"),#imageLiteral(resourceName: "3 Terza schermata"),#imageLiteral(resourceName: "4 Quarta schermata"),#imageLiteral(resourceName: "5 Quinta schermata")]
     

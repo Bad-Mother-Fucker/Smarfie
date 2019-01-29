@@ -14,8 +14,8 @@ class MySelfiesDetailsViewController: UIViewController {
     
     var photo: UIImage?
     var index: Int?
-    var photoType:PhotoType?
-    var queue = DispatchQueue(label: "queue",qos: .utility)
+    var photoType: PhotoType?
+    var queue = DispatchQueue(label: "queue", qos: .utility)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +54,8 @@ class MySelfiesDetailsViewController: UIViewController {
                     PersistenceService.saveContext()
                 }
                 
-            }else {
-                guard let index = PhotoShared.shared.setOfBest!.index(of: self.photo!)else{return}
+            } else {
+                guard let index = PhotoShared.shared.setOfBest!.index(of: self.photo!) else { return }
                 PhotoShared.shared.setOfBest!.remove(at: index)
                 self.queue.async{
                     BestSelfie.shared.removeBest(selfie: self.photo!)
@@ -63,7 +63,7 @@ class MySelfiesDetailsViewController: UIViewController {
                     }
                 }
             
-             NotificationCenter.default.post(Notification(name: Notification.Name("ReloadCollectionViews"),object: nil))
+             NotificationCenter.default.post(Notification(name: Notification.Name("ReloadCollectionViews"), object: nil))
             
             alertController.dismiss(animated: true, completion: nil)
             self.dismiss(animated: true, completion: nil)
@@ -111,4 +111,3 @@ extension MySelfiesDetailsViewController: UINavigationControllerDelegate {
     case favourite
     case best
 }
-

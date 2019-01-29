@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+// MARK: TRASH
+
+
 class FirstTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     var sourceController: UIViewController?
     var imageArray: [UIImage] = [#imageLiteral(resourceName: "image1"), #imageLiteral(resourceName: "image2"), #imageLiteral(resourceName: "image3"), #imageLiteral(resourceName: "image4"), #imageLiteral(resourceName: "image5"), #imageLiteral(resourceName: "image6"), #imageLiteral(resourceName: "image7"), #imageLiteral(resourceName: "image8")]
@@ -65,27 +68,29 @@ class FirstTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
-            let cellImage = cell.viewWithTag(1) as! UIImageView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        if let cellImage = cell.viewWithTag(1) as? UIImageView {
             if let _ = PhotoShared.shared.setOfBest {
                 cellImage.image = PhotoShared.shared.bestPhotos[indexPath.item]
             }
-            cell.layer.cornerRadius = 5
-            cell.layer.borderWidth = 0.1
-            cell.layer.borderColor = UIColor.gray.cgColor
-             return cell
+        }
+        cell.layer.cornerRadius = 5
+        cell.layer.borderWidth = 0.1
+        cell.layer.borderColor = UIColor.gray.cgColor
+        return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _ = PhotoShared.shared.setOfBest {
-            let controller = UIStoryboard(name: "Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "MySelfiesDetailsViewController") as! MySelfiesDetailsViewController
-            controller.photo = PhotoShared.shared.bestPhotos[indexPath.item]
-            controller.index = indexPath.item
-            controller.photoType = .best
-            let VC = UINavigationController(rootViewController: controller)
-            if let source = sourceController{
-                source.present(_:VC,animated:true,completion:nil)
+            if let controller = UIStoryboard(name: "Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "MySelfiesDetailsViewController") as? MySelfiesDetailsViewController {
+                controller.photo = PhotoShared.shared.bestPhotos[indexPath.item]
+                controller.index = indexPath.item
+                controller.photoType = .best
+                let VC = UINavigationController(rootViewController: controller)
+                if let source = sourceController{
+                    source.present(_: VC,animated: true,completion: nil)
+                }
             }
         }else{
             return
